@@ -1,1 +1,72 @@
-/* You can add global styles to this file, and also import other style files */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.container {
+  max-width: 1600px;
+  margin: 0 auto;
+}
+
+
+@media only screen and (max-width:1600px) {
+  .container {
+    padding: 0 16px;
+    margin: 0 auto;
+  }
+}
+
+html,
+body {
+  height: 100%;
+  margin: 0;
+  font-family: 'SF Pro', sans-serif;
+
+  button,
+  a,
+  input {
+    font-family: 'SF Pro', sans-serif;
+
+  }
+}
+
+
+.title {
+  @apply text-[50px] font-bold;
+}
+
+
+@media only screen and (max-width:1024px) {
+  .title {
+    @apply text-[24px] font-bold;
+  }
+
+}
+
+.bg-linear-gold {
+  @apply font-semibold;
+  position: relative;
+  z-index: 2;
+  background: linear-gradient(180.34deg, #856220 15.43%, #F4E683 34.91%, #BF923D 50.85%, #4E341B 68.56%, #7e7609 86.26%);
+  border-radius: 50px;
+  padding: 15px 20px;
+  display: flex;
+  align-items: center;
+
+  &::after {
+    content: "";
+    width: calc(100% - 5px);
+    height: calc(100% - 5px);
+    top: 2px;
+    left: 3px;
+    display: block;
+    position: absolute;
+    z-index: 1;
+    background: #000;
+    border-radius: 50px;
+
+  }
+
+  span {
+    @apply text-white relative z-[3] flex items-center gap-[8px];
+  }
+}

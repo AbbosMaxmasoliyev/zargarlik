@@ -1,0 +1,50 @@
+<div class="container">
+  <div
+    class="grid grid-cols-[1fr_1fr] md:grid-cols-[1fr_3fr] lg:grid-cols-[1fr_2fr] justify-between py-[20px] gap-[10px] items-center"
+  >
+    <!-- Logo -->
+    <a routerLink="/" class="inline-block">
+      <img src="/images/zargarlik-logo.svg" alt="Logo" class="h-[42px]" />
+    </a>
+
+    <!-- Navbar Links (hidden on mobile) -->
+    <div
+      class="header-links items-center justify-between hidden lg:flex"
+      #headerLinks
+    >
+      <ul class="flex flex-col lg:flex-row justify-center lg:gap-[57px] gap-5">
+        <li>
+          <a routerLinkActive="active" routerLink="/database">
+            Ma’lumotlar to’plami
+          </a>
+        </li>
+        <li>
+          <a routerLinkActive="active" routerLink="/educational-institute">
+            Ta’lim muassasalari
+          </a>
+        </li>
+        <li>
+          <a routerLinkActive="active" routerLink="/exhibition">Ko’rgazma</a>
+        </li>
+        <li>
+          <a routerLinkActive="active" routerLink="/news">Yangiliklar</a>
+        </li>
+      </ul>
+
+      <a href="tel:+79106088631" class="bg-linear-gold mt-4 lg:mt-0">
+        <span class="text-white relative z-[3] flex items-center gap-[8px]">
+          <mat-icon svgIcon="call"></mat-icon>
+          +7 910 608-86-31
+        </span>
+      </a>
+      <button (click)="toggleNavbar()" class="lg:hidden absolute top-[20px] right-[20px] text-white">
+        <mat-icon svgIcon="exit"></mat-icon>
+      </button>
+    </div>
+
+    <!-- Burger button for mobile -->
+    <button class="lg:hidden block justify-self-end" (click)="toggleNavbar()">
+      <mat-icon svgIcon="menu"></mat-icon>
+    </button>
+  </div>
+</div>

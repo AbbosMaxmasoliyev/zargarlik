@@ -1,0 +1,10 @@
+<div class="carousel">
+  <div class="carousel-container">
+    <div class="carousel-track" #track>
+      <ng-content></ng-content>
+    </div>
+  </div>
+   <button *ngIf="btnShow" class="carousel-nav left" (click)="prev()">‹</button>
+  <button *ngIf="btnShow" class="carousel-nav right" (click)="next()">›</button>
+
+</div>

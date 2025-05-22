@@ -1,0 +1,22 @@
+<div
+  class="flex flex-col max-w-[788px] items-center rounded-[30px] bg-white gap-4 relative"
+>
+  <img
+    [src]="image()"
+    alt=""
+    class="rounded-t-[30px] h-[260px] object-cover w-[100%]"
+  />
+  <div class="w-full flex items-center absolute justify-between p-3 top-0 left-0 text-zinc-500">
+    <span class="bg-white py-[6px] px-[8px] rounded-[34px] flex items-center gap-1 text-[12px] lg:text-[14px]"><mat-icon svgIcon="time"></mat-icon>{{ date() }}</span>
+    <span class="bg-white py-[6px] px-[8px] rounded-[34px] flex items-center gap-1 text-[12px] lg:text-[14px]"><mat-icon svgIcon="eye"></mat-icon>{{ views() }}</span>
+  </div>
+  <div class="h-full box-border p-4">
+    <div class="h-full flex flex-col items-start gap-4">
+      <p class="w-full text-base lg:text-[24px] font-semibold">{{ name() }}</p>
+
+      <div class="flex items-start">
+        <p class="text-zinc-500 text-[12px] lg:text-[14px]">{{ description() }}</p>
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,29 @@
+.hero {
+  background-image: url("/assets/hero_bg.png");
+  background-position: center;
+  background-size: cover;
+  position: relative;
+
+  &::after {
+    content: "";
+    width: calc(50% - 471px);
+    display: block;
+    border-width: 45px 0px 45px 45px;
+    border-style: solid;
+    border-color: transparent #F9F1EA #F9F1EA transparent;
+    bottom: 0;
+    right: 0;
+    position: absolute;
+  }
+  &::before {
+    content: "";
+    width: calc(50% - 471px);
+    display: block;
+    border-width: 0px 45px 45px 45px;
+    border-style: solid;
+    border-color: #F9F1EA transparent #F9F1EA #F9F1EA;
+    bottom: 0;
+    left: 0;
+    position: absolute;
+  }
+}

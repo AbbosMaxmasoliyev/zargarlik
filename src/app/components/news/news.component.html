@@ -1,0 +1,49 @@
+<div class="news">
+  <div class="container flex flex-col gap-8 pb-14">
+    <div class="w-full flex justify-between items-center">
+      <h3 class="title">Yangiliklar</h3>
+
+      <div class="flex lg:hidden justify-between items-center text-white gap-2 mr-[20px] lg:mr-0">
+        <button
+          (click)="goNewsPrev()"
+          class="bg-zinc-500 hover:bg-gray-300 rounded-full size-8 flex justify-center items-center"
+        >
+          <mat-icon class="rotate-180" svgIcon="chevron-right"></mat-icon>
+        </button>
+        <button
+          (click)="goNewsNext()"
+          class="bg-zinc-500 hover:bg-gray-300 rounded-full size-8 flex justify-center items-center"
+        >
+          <mat-icon svgIcon="chevron-right"></mat-icon>
+        </button>
+      </div>
+    </div>
+
+    <div class="hidden lg:grid grid-cols-1 md:grid-cols-3 gap-6 mt-9">
+      <div *ngFor="let exhibition of newsData">
+        <app-news-card
+          [name]="exhibition.nomi"
+          [image]="exhibition.image"
+          [description]="exhibition.description"
+          [date]="exhibition.sana"
+          [views]="exhibition.views"
+        />
+      </div>
+    </div>
+
+    <!-- Mobile view: Carousel -->
+    <div class="block lg:hidden">
+      <app-carousel #newsCarousel [itemWidth]="90" [btnShow]="false">
+        <div *ngFor="let exhibition of newsData">
+          <app-news-card
+            [name]="exhibition.nomi"
+            [image]="exhibition.image"
+            [description]="exhibition.description"
+            [date]="exhibition.sana"
+            [views]="exhibition.views"
+          />
+        </div>
+      </app-carousel>
+    </div>
+  </div>
+</div>

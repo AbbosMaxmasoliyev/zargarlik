@@ -1,0 +1,16 @@
+.detail{
+  width: calc(100% - 104px);
+  @apply w-full lg:w-auto;
+}
+
+
+.document-icon-link{
+  @apply p-3 flex justify-center items-center bg-zinc-700 rounded-full w-full;
+  transition: all linear .15s ;
+  &:hover{
+    @apply text-zinc-900 bg-zinc-200;
+  }
+}
+
+
+

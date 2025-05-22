@@ -1,0 +1,26 @@
+<div class="py-[120px]">
+  <div class="container flex flex-col gap-9">
+    <div class="text-center lg:text-left">
+      <h2 class="title">Ma’lumotlar to’plami</h2>
+      <p class=" text-[14px] lg:text-[22px] text-zinc-500">
+        O’zingizga kerakli ma’lumotlarni havola orqali olsangiz bo’ladi
+      </p>
+    </div>
+    <div class="grid lg:grid-cols-2 grid-cols-1 gap-6">
+      <div
+        *ngFor="let set of data"
+        class="grid grid-rows-[469px_auto] gap-4 bg-white rounded-[30px] overflow-hidden"
+      >
+        <img [src]="set.image" alt="" class="w-full h-full object-cover" />
+        <div class="detail grid lg:grid-rows-[64px_auto] items-start gap-4 lg:gap-[56px] p-4 ">
+          <p class="lg:text-[24px] font-semibold">{{ set.title }}</p>
+          <a [routerLink]="set.link" class="bg-linear-gold w-full lg:w-max flex justify-center">
+            <span
+              >Havolaga o’tish <mat-icon svgIcon="chevron-right"></mat-icon
+            ></span>
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

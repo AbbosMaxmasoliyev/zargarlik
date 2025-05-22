@@ -1,0 +1,16 @@
+<div class="flex flex-col  w-full items-center rounded-[30px] bg-white">
+  <img [src]="image()" alt="" class="rounded-t-[30px] w-full"/>
+  <div class="flex flex-col items-center p-4 gap-4 w-full">
+    <p class="w-full text-[24px] font-semibold">{{name()}}</p>
+    <div class="w-full flex items-start">
+      <mat-icon svgIcon="location"></mat-icon>
+      <p>{{adress()}}</p>
+    </div>
+    <a href="tel:+79106088631" class="bg-linear-gold w-full flex justify-center ">
+      <span class="text-white relative z-[3] flex items-center gap-[8px]">
+        <mat-icon svgIcon="call"></mat-icon>
+        Qo’ng’iroq qilish
+      </span>
+    </a>
+  </div>
+</div>

@@ -1,0 +1,45 @@
+<div class="schools">
+  <div class="container flex flex-col gap-8">
+    <div class="w-full flex justify-between">
+      <h3 class="title">Ta’lim muassasalari</h3>
+      <div
+        class="flex lg:hidden justify-between items-center mb-4 text-white gap-2 mr-[20px] lg:mr-0"
+      >
+        <button
+          (click)="goPrev()"
+          class="bg-zinc-500 hover:bg-gray-300 rounded-full size-8 flex justify-center items-center"
+        >
+          <mat-icon class="rotate-180" svgIcon="chevron-right"></mat-icon>
+        </button>
+        <button
+          (click)="goNext()"
+          class="bg-zinc-500 hover:bg-gray-300 rounded-full size-8 flex justify-center items-center"
+        >
+          <mat-icon svgIcon="chevron-right"></mat-icon>
+        </button>
+      </div>
+    </div>
+
+    <div class="hidden lg:grid grid-cols-1 md:grid-cols-4 gap-4">
+      <div *ngFor="let school of schools">
+        <app-school-card
+          [name]="school.nomi"
+          [image]="school.image"
+          [adress]="school.manzil"
+        />
+      </div>
+    </div>
+
+    <div class="block lg:hidden">
+      <app-carousel [itemWidth]="90" [btnShow]="false">
+        <div *ngFor="let school of schools">
+          <app-school-card
+            [name]="school.nomi"
+            [image]="school.image"
+            [adress]="school.manzil"
+          />
+        </div>
+      </app-carousel>
+    </div>
+  </div>
+</div>

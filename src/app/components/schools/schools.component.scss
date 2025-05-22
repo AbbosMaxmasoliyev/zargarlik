@@ -1,0 +1,15 @@
+.news {
+  position: relative;
+  padding: 56px 0;
+}
+
+@media only screen and (max-width:1024px) {
+  .schools {
+    padding: 56px 0;
+    padding-left: 20px;
+
+    &>.container {
+      padding: 0;
+    }
+  }
+}

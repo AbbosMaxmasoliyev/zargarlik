@@ -1,0 +1,37 @@
+<div
+  class="flex lg:flex-row flex-col max-w-[788px] items-center rounded-[30px] bg-white gap-4"
+>
+  <img
+    [src]="image()"
+    alt=""
+    class="rounded-t-[30px] lg:rounded-t-[0px] lg:!rounded-l-[30px] h-[180px] object-top lg:h-full block object-cover w-full lg:w-auto"
+  />
+  <div class="w-full p-4 lg:p-0 h-full box-border">
+    <div class="h-full flex flex-col items-start gap-3 lg:gap-2 xl:gap-4 p-2">
+      <p
+        class="w-full text-[16px] lg:text-[16px] 2xl:text-[24px] font-semibold"
+      >
+        {{ name() }}
+      </p>
+      <div class="flex items-start">
+        <mat-icon svgIcon="calendar"></mat-icon>
+        <p class="text-[12px] lg:text-[12px] 2xl:text-base">{{ date() }}</p>
+      </div>
+      <div class="flex items-start">
+        <mat-icon svgIcon="location"></mat-icon>
+        <p class="text-[12px] lg:text-[12px] 2xl:text-base">{{ adress() }}</p>
+      </div>
+      <a
+        href="tel:+79106088631"
+        class="bg-linear-gold flex justify-center lg:py-[10px] lg:px-[16px] xl:py-[10px] xl:px-[16px] 2xl:px-[20px] 2xl:py-[14px]"
+      >
+        <span
+          class="text-white relative z-[3] flex items-center gap-[8px] text-base"
+        >
+          Ro'yxatdan o'tish
+          <mat-icon svgIcon="chevron-right"></mat-icon>
+        </span>
+      </a>
+    </div>
+  </div>
+</div>

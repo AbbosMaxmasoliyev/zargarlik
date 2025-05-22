@@ -1,0 +1,40 @@
+.documents-content {
+  position: relative;
+
+  &::before {
+    content: "";
+    height: calc(100% - 74px);
+    top: 37px;
+    left: -12px;
+    position: absolute;
+    border-width: 45px;
+    border-style: solid;
+    border-color: transparent transparent transparent #F9F1EA;
+  }
+
+  &::after {
+    content: "";
+    height: calc(100% - 74px);
+    top: 37px;
+    right: -12px;
+    position: absolute;
+    border-width: 45px;
+    border-style: solid;
+    border-color: transparent #F9F1EA transparent transparent;
+  }
+}
+
+@media only screen and (max-width:1024px) {
+  .documents-content {
+
+    &::before {
+      display: none;
+
+    }
+
+    &::after {
+      display: none;
+    }
+  }
+
+}
