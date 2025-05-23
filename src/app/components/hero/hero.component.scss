@@ -6,7 +6,7 @@
 
   &::after {
     content: "";
-    width: calc(50% - 471px);
+    width: 25%;
     display: block;
     border-width: 45px 0px 45px 45px;
     border-style: solid;
@@ -15,9 +15,10 @@
     right: 0;
     position: absolute;
   }
+
   &::before {
     content: "";
-    width: calc(50% - 471px);
+    width: 25%;
     display: block;
     border-width: 0px 45px 45px 45px;
     border-style: solid;
@@ -26,4 +27,25 @@
     left: 0;
     position: absolute;
   }
+}
+
+
+
+@media only screen and (max-width:1024px) {
+  .hero {
+
+
+    &::after {
+      content: "";
+      width: 20%;
+
+    }
+
+    &::before {
+      content: "";
+      width: 20%;
+
+    }
+  }
+
 }

@@ -51,6 +51,7 @@ body {
   padding: 15px 20px;
   display: flex;
   align-items: center;
+  transition: all 5s ease-in linear;
 
   &::after {
     content: "";
@@ -68,5 +69,8 @@ body {
 
   span {
     @apply text-white relative z-[3] flex items-center gap-[8px];
+    transition: all .15s ease-in;
   }
+
+
 }
