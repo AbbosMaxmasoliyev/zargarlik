@@ -14,20 +14,22 @@
     >
       <ul class="flex flex-col lg:flex-row justify-center lg:gap-[57px] gap-5">
         <li>
-          <a routerLinkActive="active" routerLink="/database">
+          <a class="cursor-pointer" (click)="scrollTo('set')">
             Ma’lumotlar to’plami
           </a>
         </li>
         <li>
-          <a routerLinkActive="active" routerLink="/educational-institute">
+          <a class="cursor-pointer" (click)="scrollTo('schools')">
             Ta’lim muassasalari
           </a>
         </li>
         <li>
-          <a routerLinkActive="active" routerLink="/exhibition">Ko’rgazma</a>
+          <a class="cursor-pointer" (click)="scrollTo('exhibition')">
+            Ko’rgazma
+          </a>
         </li>
         <li>
-          <a routerLinkActive="active" routerLink="/news">Yangiliklar</a>
+          <a class="cursor-pointer" (click)="scrollTo('news')"> Yangiliklar </a>
         </li>
       </ul>
 
@@ -37,7 +39,10 @@
           +7 910 608-86-31
         </span>
       </a>
-      <button (click)="toggleNavbar()" class="lg:hidden absolute top-[20px] right-[20px] text-white">
+      <button
+        (click)="toggleNavbar()"
+        class="lg:hidden absolute top-[20px] right-[20px] text-white"
+      >
         <mat-icon svgIcon="exit"></mat-icon>
       </button>
     </div>
